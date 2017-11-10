@@ -99,4 +99,20 @@ return [
         ],
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | Database provider index
+    |--------------------------------------------------------------------------
+    |
+    | This index is used on the 'provider' field onto 'user_identities' table
+    |
+    */
+
+    'providerIndex' => [
+        'local' => 0,
+        'facebook' => 1,
+        'twitter' => 2,
+        'google' => 3
+    ],
+
 ];

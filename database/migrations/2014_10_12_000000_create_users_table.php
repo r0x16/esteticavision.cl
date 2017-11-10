@@ -18,6 +18,14 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+
+            //Foto extraída desde el proveedor de autenticación
+            $table->string('photo');
+
+            // Determina si el usuario no ha rellenado sus datos
+            // Utilizado cuando se realiza una cotización rápida solo con el email
+            $table->boolean('incomplete')->default(false);
+            
             $table->rememberToken();
             $table->timestamps();
         });
