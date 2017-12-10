@@ -20,4 +20,7 @@ Route::middleware('auth:api')->group(function () {
     
     Route::post('/media/image', 'Api\Multimedia\ImageUploadController@imageStore');
     Route::post('/media/youtube', 'Api\Multimedia\YoutubeElementController@youtubeStore');
+    Route::resource('categories', 'Api\CategoryController');
 });
+
+Route::get('/media/list', 'Api\Multimedia\ImageUploadController@listImages');
