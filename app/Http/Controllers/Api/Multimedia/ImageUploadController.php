@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Multimedia;
 use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use App\Http\Controllers\Controller;
+use App\Multimedia;
 use Storage;
 
 class ImageUploadController extends MultimediaController
@@ -72,5 +73,19 @@ class ImageUploadController extends MultimediaController
         return
             $r->hasFile('file')
             && $r->file->isValid();
+    }
+
+    public function listImages(Request $request) {
+        \Log::debug($request);
+        $images = Multimedia::where('type', 0)->orderBy('created_at','desc')->get();
+        $data = [];
+        foreach($images as $img) {
+            $data[] = [
+                'image' => $img->src,
+                'thumb' => $img->thumbnail,
+                'folder' => 'default'
+            ];
+        }
+        return $data;
     }
 }
