@@ -12,4 +12,4 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/p/{product}/{slug?}', 'ProductController@index');
+Route::get('/p/{product}/{slug?}', 'ProductController@index')->name('product');

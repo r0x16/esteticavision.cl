@@ -13,7 +13,11 @@ class ProductController extends Controller
         // dd($this->getCategoryChain($product->category));
         return view('product', [
             'product' => $product,
-            'bradcrumb' => $this->getCategorychain($product->category)
+            'bradcrumb' => $this->getCategorychain($product->category),
+            'canonical' => route('product', [
+                'id' => $product->id,
+                'slug' => $product->slug
+            ])
         ]);
     }
 

@@ -1,6 +1,13 @@
 @extends('layouts.index')
 
-@section('title', 'Estética Visión')
+@section('title')
+{{ $product->name}} | Estética Visión
+@endsection
+
+@section('meta')
+<link rel="canonical" href="{{ $canonical }}">
+<meta name="description" content="{{$product->name}} | {{$product->description}}">
+@endsection
 
 @section('styles')
 <link rel="stylesheet" href="/css/product.css">
