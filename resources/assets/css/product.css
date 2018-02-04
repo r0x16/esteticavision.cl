@@ -1,3 +1,11 @@
+#product-container {
+    margin-bottom: 100px;
+}
+
+.cart-options {
+    margin: 15px 0;
+}
+
 .breadcumb {
     font-size: 0.8em;
     margin-top: 10px;
@@ -8,7 +16,8 @@
 }
 
 .code {
-    font-size: 0.8em;;
+    font-size: 0.8em;
+    ;
 }
 
 .brand {

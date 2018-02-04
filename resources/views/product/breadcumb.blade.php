@@ -1,5 +1,7 @@
 <div class="breadcumb">
     <span class="category">
-        Videojuegos > Nintendo > Nintendo Switch
+        @foreach($bradcrumb as $item)
+            {{$item->name}} > 
+        @endforeach
     </span>
 </div>

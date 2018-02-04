@@ -9,4 +9,8 @@ class Category extends Model
     public function webpage() {
         return $this->hasOne('App\CategoryWebpage');
     }
+
+    public function father() {
+        return $this->belongsTo('App\Category', 'supercategory_id');
+    }
 }

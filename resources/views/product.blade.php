@@ -3,14 +3,14 @@
 @section('title', 'Estética Visión')
 
 @section('styles')
-<link rel="stylesheet" href="css/product.css">
+<link rel="stylesheet" href="/css/product.css">
 @endsection
 
 @section('footerscripts')
 @endsection
 
 @section('body')
-<div class="container-fluid">
+<div class="container-fluid" id="product-container">
     @include('include.management')
     <div class="row">
         <div class="col-md-3">
