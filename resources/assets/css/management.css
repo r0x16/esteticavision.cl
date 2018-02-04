@@ -1,0 +1,19 @@
+#managementBar {
+    background-color: #233142;
+    padding: 10px 5px;
+}
+
+#managementBar #searchInput{
+    border-color: #f8b256;
+}
+
+#managementBar #searchButton {
+    background-color: #f8b256;
+    border: 1px solid #f8b256;
+    color: #233142;
+    border-radius: 0 5px 5px 0;
+}
+
+#managementBar #userTab {
+    text-align: right;
+}

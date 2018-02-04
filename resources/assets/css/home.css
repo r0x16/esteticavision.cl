@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+#body {
+    background-color: #fff;
+}
+
+header .navbar {
+    position: absolute;
+    z-index: 10;
+}
+
+.presentation {
+    height: 70%;
+    position: relative;
+}
+
+.presentation hgroup {
+    font-family: 'Times new Roman', cursive;
+    color: white;
+    position: absolute;
+    top: 20%;
+    text-shadow: 0px 0px 1px black, 2px 2px 2px black;
+    width: 100%;
+}
+
+.presentation h1 {
+    font-size: 3.5em;
+    text-align: center;
+}
+
+.presentation h2 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.slogan {
+    font-family: "Parisienne", cursive;
+    font-size: 3em;
+    margin: 30px 0px;
+    color: #555;
+}
+
+.slogan .slogan-brand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2em;
+    display: block;
+    color: black;
+}
+
+.banners .row>div {
+    position: relative;
+    color: white;
+}
+
+.banners .row>div:nth-child(1) {
+    height: 280px;
+    background: url("../images/banners/swarovski_jewelry_banner.jpg");
+    background-size: cover;
+}
+
+.banners .row>div:nth-child(2) {
+    height: 280px;
+    background: url("../images/banners/joyas-primavera-2017.jpg") center;
+    background-size: cover;
+}
+
+.banners .row>div:nth-child(3) {
+    height: 280px;
+    background: url("../images/banners/joyas-regalo.jpg");
+    background-size: cover;
+}
+
+.banners .row>div:nth-child(4) {
+    height: 280px;
+    background: url("../images/banners/matrimonio-joyas.jpg");
+    background-size: cover;
+}
+
+.banners .row>div:nth-child(2) h2 {
+    position: absolute;
+    text-align: center;
+    font-size: 3.5em;
+    text-shadow: 2px 2px 3px black;
+    height: 80%;
+    top: 10%;
+}
+
+.banners .row>div:nth-child(3) h2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-shadow: 2px 2px 3px black;
+}
+
+.banners .row>div:nth-child(4) h4 {
+    position: absolute;
+}

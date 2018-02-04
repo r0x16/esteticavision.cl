@@ -1,0 +1,36 @@
+#categories .category {
+    background-color: #F4F4F4;
+    border: 1px solid #E4E4E4;
+    padding: 5px 0 5px 10px;
+    font-weight: bold;
+}
+
+#categories h2 {
+    font-size: 0.7em;
+    border-bottom: 1px solid #DDD;
+    color: #777;
+    padding: 10px 5px;
+}
+
+#categories .icon-plus {
+    font-size: 0.6em;
+    color: rgb(33, 33, 61);
+}
+
+#categories a.expand-category:hover,
+#categories a.expand-category:active {
+    text-decoration: none;
+}
+
+#categories .collapse li,
+#categories .collapsing li {
+    list-style: square;
+    color: #999;
+    font-size: 0.8em;
+}
+
+#categories .collapse li a,
+#categories .collapsing li a {
+    font-size: 1em;
+    color: #000;
+}

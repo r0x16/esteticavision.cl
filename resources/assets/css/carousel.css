@@ -1,0 +1,19 @@
+#carousel {
+    margin: 15px;
+    padding: 10px;
+    border: 1px solid #EEE;
+    box-shadow: 2px 2px 10px #777;
+}
+
+#carousel .carousel-inner {
+    max-height: 400px;
+}
+
+@media only screen and (max-width: 480px) {
+    #carousel {
+        margin: 15px 0;
+        padding: 0;
+        border-width: 0px;
+        box-shadow: none;
+    }
+}

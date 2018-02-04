@@ -11,5 +11,22 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix
+    .styles([
+        'resources/assets/css/vendor/normalize.css',
+        'resources/assets/css/vendor/bootstrap.min.css',
+        'resources/assets/css/header.css',
+        'resources/assets/css/icomoon.css',
+        'resources/assets/css/footer.css',
+        'resources/assets/css/management.css',
+        'resources/assets/css/categories.css'
+    ], 'public/css/all.css')
+    .styles([
+        'resources/assets/css/home.css',
+        'resources/assets/css/featured.css',
+        'resources/assets/css/carousel.css'
+    ], 'public/css/home.css')
+    .styles([
+        'resources/assets/css/no-home.css',
+        'resources/assets/css/product.css'
+    ], 'public/css/product.css');
