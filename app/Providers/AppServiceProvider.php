@@ -16,6 +16,9 @@ class AppServiceProvider extends ServiceProvider
     {
         // Esto soluciona un problema que existe con la actual versión de MariaDB
         Schema::defaultStringLength(191);
+        \DB::listen(function ($query) {
+            \Log::debug($query->sql, $query->bindings, $query->time);
+        });
     }
 
     /**

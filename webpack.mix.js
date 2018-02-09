@@ -29,4 +29,8 @@ mix
     .styles([
         'resources/assets/css/no-home.css',
         'resources/assets/css/product.css'
-    ], 'public/css/product.css');
+    ], 'public/css/product.css')
+    .styles([
+        'resources/assets/css/no-home.css',
+        'resources/assets/css/search.css'
+    ], 'public/css/search.css');

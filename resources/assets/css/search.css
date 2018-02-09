@@ -1,0 +1,48 @@
+#search-container {
+    margin-bottom: 100px;
+}
+
+h1.search-title {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #777;
+}
+
+h1.search-title .search-query {
+    color: black;
+}
+
+.search-results {
+    border: 1px solid #DDD;
+    margin: 3px;
+    padding: 10px;
+}
+
+.search-stats {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.search-result-item {
+    margin-bottom: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #DDD;
+}
+
+.search-result-item .item-thumbnail {
+    height: 120px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 6px -6px #AAA;
+    border: 1px solid #DDD;
+}
+
+.search-result-item .item-brand {
+    color: #888;
+}
+
+.search-result-item .item-code {
+    color: #666;
+    font-size: 0.8em;
+}
