@@ -9004,28 +9004,36 @@ a.text-dark:hover {
 
 
 /*# sourceMappingURL=bootstrap.min.css.map */
-header{
+header {
     position: relative;
     /* background-color: rgba(40, 40, 40, 1); */
 }
 
-header .navbar{
+header .navbar {
     width: 100%;
     /* background-color: rgba(50, 169, 248, 0.7); */
-    background-color: rgba(40, 40, 40, 0.6);
+    /* background-color: rgba(40, 40, 40, 0.8); */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-header .navbar-brand{
+.navbar-dark .navbar-nav .nav-link {
+    color: #000;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #555;
+}
+
+header .navbar-brand {
     /* font-family: 'Great Vibes', cursive;
     font-size: 2em;
     line-height: 0.5em;
     padding-left: 20px;
     position: relative;
     text-shadow: 2px 2px 2px black; */
-    
 }
 
-header .navbar-brand img{
+header .navbar-brand img {
     /* width: 40px;
     height: 40px; 
     position: absolute;
@@ -9034,8 +9042,8 @@ header .navbar-brand img{
 }
 @font-face {
     font-family: 'icomoon';
-    src: url('fonts/icomoon.eot?qmd63w');
-    src: url('fonts/icomoon.eot?qmd63w#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?qmd63w') format('truetype'), url('fonts/icomoon.woff?qmd63w') format('woff'), url('fonts/icomoon.svg?qmd63w#icomoon') format('svg');
+    src: url('fonts/icomoon.eot?ld1i8o');
+    src: url('fonts/icomoon.eot?ld1i8o#iefix') format('embedded-opentype'), url('fonts/icomoon.ttf?ld1i8o') format('truetype'), url('fonts/icomoon.woff?ld1i8o') format('woff'), url('fonts/icomoon.svg?ld1i8o#icomoon') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -9060,6 +9068,11 @@ header .navbar-brand img{
     color: #3b5998;
 }
 
+.icon-facebook:before {
+    content: "\e900";
+    color: #FFF;
+}
+
 .icon-brand3:before {
     content: "\e902";
     color: #dc4e41;
@@ -9073,6 +9086,11 @@ header .navbar-brand img{
 .icon-brand6:before {
     content: "\e905";
     color: #1da1f2;
+}
+
+.icon-twitter:before {
+    content: "\e905";
+    color: #FFF;
 }
 
 .icon-brand8:before {
@@ -9096,6 +9114,10 @@ header .navbar-brand img{
     content: "\e947";
 }
 
+.icon-floppy-disk:before {
+    content: "\e962";
+}
+
 .icon-search:before {
     content: "\e986";
 }
@@ -9115,39 +9137,55 @@ header .navbar-brand img{
 .icon-plus:before {
     content: "\ea0a";
 }
-footer{
-    background: #BBB;
+
+.icon-cross:before {
+    content: "\ea0f";
+}
+footer {
+    background: #000;
     padding: 30px 0px;
+    color: #FFF;
+    font-size: 0.8em;
 }
 
-footer [class^="icon-"], footer [class*=" icon-"]{
-    font-size: 2em;
+footer .logo_footer {
+    border-right: 1px solid #222;
 }
 
-footer h4{
-    color: #555;
+footer .header_footer {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #111;
+    margin-bottom: 10px;
+}
+
+footer h4 {
+    font-size: 1.3em;
     position: relative;
-    margin-bottom: 20px;
+    margin: 5px 0;
+    border-bottom: 1px solid #111;
 }
 
-footer h4::before{
-    content: '';
-    position: absolute;
-    border-bottom: 2px solid white;
-    bottom: -10px;
-    left: 0px;
-    width: 50px;
-}
-
-footer a:link, footer a:visited{
+footer a:link,
+footer a:visited {
     color: #413D3D;
 }
-#managementBar {
-    background-color: #233142;
-    padding: 10px 5px;
+
+footer .follow_footer {
+    font-size: 1.1em;
 }
 
-#managementBar #searchInput{
+footer .follow_footer a {
+    margin: 0 5px;
+}
+#managementBar {
+    /* background-color: #233142; */
+    background-color: #387474;
+    padding: 10px 5px;
+    color: white;
+    font-size: 1.2em;
+}
+
+#managementBar #searchInput {
     border-color: #f8b256;
 }
 
@@ -9160,6 +9198,11 @@ footer a:link, footer a:visited{
 
 #managementBar #userTab {
     text-align: right;
+}
+
+#managementBar .cart_anchor {
+    color: white;
+    text-decoration: none;
 }
 #categories .category {
     background-color: #F4F4F4;

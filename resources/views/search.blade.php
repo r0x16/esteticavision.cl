@@ -1,11 +1,11 @@
 @extends('layouts.index')
 
 @section('title')
-{{ $query }} en Estética Visión
+{{ $query }} en {{ $app_name }}
 @endsection
 
 @section('meta')
-<meta name="description" content="Buscando {{ $query }} en Estética Visión">
+<meta name="description" content="Buscando {{ $query }} en {{ $app_name }}">
 @endsection
 
 @section('styles')
@@ -30,9 +30,13 @@
                         <strong>{{ $products->firstItem() }} - {{ $products->lastItem() }}</strong>
                         de un total de <strong>{{ $products->count() }}</strong>
                     </div>
+                    <div class="row">
                     @foreach($products as $p)
-                        @include('search.item')
+                        <div class="col-md-6">
+                            @include('search.item')
+                        </div>
                     @endforeach
+                    </div>
                 </div>
                 @include('search.pagination')
             </div>

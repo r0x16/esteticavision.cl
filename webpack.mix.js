@@ -33,4 +33,18 @@ mix
     .styles([
         'resources/assets/css/no-home.css',
         'resources/assets/css/search.css'
-    ], 'public/css/search.css');
+    ], 'public/css/search.css')
+    .styles([
+        'resources/assets/css/no-home.css',
+        'resources/assets/css/register.css'
+    ], 'public/css/register.css')
+    .styles([
+        'resources/assets/css/no-home.css',
+        'resources/assets/css/profile.css'
+    ], 'public/css/profile.css')
+    .styles([
+        'resources/assets/css/cart.css'
+    ], 'public/css/cart.css')
+    .styles([
+        'resources/assets/css/quoted.css'
+    ], 'public/css/quoted.css');

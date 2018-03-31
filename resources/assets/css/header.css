@@ -1,25 +1,33 @@
-header{
+header {
     position: relative;
     /* background-color: rgba(40, 40, 40, 1); */
 }
 
-header .navbar{
+header .navbar {
     width: 100%;
     /* background-color: rgba(50, 169, 248, 0.7); */
-    background-color: rgba(40, 40, 40, 0.6);
+    /* background-color: rgba(40, 40, 40, 0.8); */
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
-header .navbar-brand{
+.navbar-dark .navbar-nav .nav-link {
+    color: #000;
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #555;
+}
+
+header .navbar-brand {
     /* font-family: 'Great Vibes', cursive;
     font-size: 2em;
     line-height: 0.5em;
     padding-left: 20px;
     position: relative;
     text-shadow: 2px 2px 2px black; */
-    
 }
 
-header .navbar-brand img{
+header .navbar-brand img {
     /* width: 40px;
     height: 40px; 
     position: absolute;

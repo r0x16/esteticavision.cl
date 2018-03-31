@@ -1,5 +1,6 @@
 header .navbar {
-    background-color: #233142;
+    /* background-color: #233142; */
+    background-color: #fff;
 }
 #product-container {
     margin-bottom: 100px;

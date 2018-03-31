@@ -1,0 +1,13 @@
+#quoted {
+    border: 1px solid #CCC;
+    background-color: #EFEFEF;
+    padding: 30px;
+    margin: 30px;
+}
+
+#quoted h2 {
+    text-align: center;
+    font-size: 2em;
+    color: rgb(20, 71, 148);
+    margin-bottom: 30px;
+}

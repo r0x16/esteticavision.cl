@@ -1,0 +1,80 @@
+h1 {
+    color: #888;
+    text-align: center;
+    font-weight: normal;
+    border-bottom: 1px solid #CCC;
+    padding: 2px 0 10px 0;
+}
+
+#register-container {
+    padding-bottom: 20px;
+    background-color: #EEE;
+}
+
+.logincontainer,
+.registercontainer {
+    background-color: #fff;
+}
+
+.form {
+    padding: 10px;
+    background-color: #FCFCFC;
+}
+
+hgroup h3 {
+    font-size: 1em;
+    color: #999;
+}
+
+hgroup h2 {
+    font-size: 1.2em;
+}
+
+h4 {
+    color: #555;
+    font-size: 1em;
+    border-top: 1px solid #DDD;
+    padding: 10px 0;
+}
+
+hgroup {
+    border-bottom: 1px solid #DDD;
+    padding: 20px;
+}
+
+.socialcontainer {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px dashed #CCC;
+}
+
+.socialcontainer .title {
+    color: #555;
+    margin-bottom: 10px;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.social {
+    font-size: 1em;
+    text-align: center;
+    border-radius: 3px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.social.facebook {
+    background-color: #3b5998;
+}
+
+.social.google {
+    background-color: #dc4e41;
+}
+
+.social.twitter {
+    background-color: #1da1f2;
+}
+
+.social .icon:before {
+    color: white;
+}

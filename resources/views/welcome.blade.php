@@ -1,6 +1,6 @@
 @extends('layouts.index')
 
-@section('title', 'Estética Visión')
+@section('title', $app_name)
 
 @section('styles')
 <link rel="stylesheet" href="css/home.css">
@@ -19,7 +19,7 @@
             @include('include.categories-all')
         </div>
         <div class="col-md-9">
-            @include('home.carousel')
+            {{--  @include('home.carousel')  --}}
             @include('home.featured')
         </div>
     </div>

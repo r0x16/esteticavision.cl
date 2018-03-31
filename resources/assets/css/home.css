@@ -16,7 +16,7 @@ header .navbar {
 }
 
 .presentation {
-    height: 70%;
+    height: 80%;
     position: relative;
 }
 
@@ -24,7 +24,7 @@ header .navbar {
     font-family: 'Times new Roman', cursive;
     color: white;
     position: absolute;
-    top: 20%;
+    top: 30%;
     text-shadow: 0px 0px 1px black, 2px 2px 2px black;
     width: 100%;
 }

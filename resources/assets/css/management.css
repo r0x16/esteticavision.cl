@@ -1,9 +1,12 @@
 #managementBar {
-    background-color: #233142;
+    /* background-color: #233142; */
+    background-color: #387474;
     padding: 10px 5px;
+    color: white;
+    font-size: 1.2em;
 }
 
-#managementBar #searchInput{
+#managementBar #searchInput {
     border-color: #f8b256;
 }
 
@@ -16,4 +19,9 @@
 
 #managementBar #userTab {
     text-align: right;
+}
+
+#managementBar .cart_anchor {
+    color: white;
+    text-decoration: none;
 }

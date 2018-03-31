@@ -1,60 +1,23 @@
 <div id="categories">
     <h2>Categorías</h2>
-    <div class="category">
-        <a class="expand-category" href="#cVideojuegos" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">
-            <span class="icon-plus"></span>
-        </a>
-        Videojuegos
-    </div>
-    <div class="collapse" id="cVideojuegos">
-        <h2>Nintendo</h2>
-        <ul>
-            <li>
-                <a href="#">Nintendo Switch</a>
-            </li>
-            <li>
-                <a href="#">Nintendo 3DS</a>
-            </li>
-            <li>
-                <a href="#">Nintendo WiiU</a>
-            </li>
-        </ul>
-        <h2>Microsoft</h2>
-        <ul>
-            <li>
-                <a href="#">XBOX ONE</a>
-            </li>
-            <li>
-                <a href="#">XBOX 360</a>
-            </li>
-        </ul>
-        <h2>Sony</h2>
-        <ul>
-            <li>
-                <a href="#">PS4</a>
-            </li>
-            <li>
-                <a href="#">PS3</a>
-            </li>
-            <li>
-                <a href="#">PS Vita</a>
-            </li>
-        </ul>
-    </div>
-    <div class="category">
-        <span class="icon-plus"></span>
-        Libros
-    </div>
-    <div class="category">
-        <span class="icon-plus"></span>
-        Artículos de oficina
-    </div>
-    <div class="category">
-        <span class="icon-plus"></span>
-        Hogar
-    </div>
-    <div class="category">
-        <span class="icon-plus"></span>
-        Mascotas
-    </div>
+    @foreach($categories as $level0)
+        <div class="category">
+        <a class="expand-category" href="#subCategory{{$level0->id}}" data-toggle="collapse" aria-expanded="false" aria-controls="collapseExample">
+                <span class="icon-plus"></span>
+            </a>
+            <a href="{{route('category', ['category' => $level0->id])}}">{{$level0->name}}</a>
+        </div>
+        <div class="collapse" id="subCategory{{$level0->id}}">
+        @foreach($level0->childrens as $level1)
+            <h2><a href="{{route('category', ['category' => $level1->id])}}">{{$level1->name}}</a></h2>
+            <ul>
+            @foreach($level1->childrens as $level2)
+                <li>
+                        <a href="{{route('category', ['category' => $level2->id])}}">{{$level2->name}}</a>
+                </li>
+            @endforeach
+            </ul>
+        @endforeach
+        </div>
+    @endforeach
 </div>

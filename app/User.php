@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function currentCart() {
+        return $this->belongsTo('App\Cart', 'active_cart_id');
+    }
+
+    public function carts() {
+        return $this->hasMany('App\Cart');
+    }
+
+    public function identity() {
+        return $this->hasOne('App\UsersIdentity');
+    }
 }
