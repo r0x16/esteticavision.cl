@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row header_footer">
             <div class="col-md-2 logo_footer">
-                <img src="images/logo_blanco.png" alt="{{$app_name}}">
+                <img src="/images/logo_blanco.png" alt="{{$app_name}}">
             </div>
             <div class="col-md-10">
                 KEP Medical es una empresa que ofrece insumos y equipos médicos.
