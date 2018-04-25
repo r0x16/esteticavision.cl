@@ -16,7 +16,7 @@ class Multimedia extends Model
 
     public function getThumbnailAttribute($value) {
         if ($this->type === 0) {
-            return Storage::disk('gallery')->url($value);
+            return Storage::disk('thumbnail')->url($value);
         }
         return $value;
     }

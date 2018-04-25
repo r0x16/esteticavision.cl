@@ -168,6 +168,7 @@ return [
          * Package Service Providers...
          */
         TomLingham\Searchy\SearchyServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Searchy' => TomLingham\Searchy\Facades\Searchy::class,
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

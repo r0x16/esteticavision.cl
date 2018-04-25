@@ -6,11 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Http\UploadedFile;
 use App\Http\Controllers\Controller;
 use App\Multimedia;
+use Intervention\Image\ImageManager;
 use Storage;
 
 class ImageUploadController extends MultimediaController
 {
     private $uploadDisk = 'gallery';
+    private $thumbnailDisk = 'thumbnail';
     /**
      * Almacena una imagen subida a través de la API
      * parámetros
@@ -26,7 +28,8 @@ class ImageUploadController extends MultimediaController
         }
 
         $filename = $this->saveImageFile($r, $r->file);
-        $multimedia = $this->multimediaStore($r->name, $filename, $filename, 0);
+        $thumbnail = $this->saveThumbnailFile($r, $r->file);
+        $multimedia = $this->multimediaStore($r->name, $filename, $thumbnail, 0);
         
         return $multimedia;
     }
@@ -36,11 +39,29 @@ class ImageUploadController extends MultimediaController
      *
      * @param Request $r
      * @param UploadedFile $file
-     * @return void
+     * @return string
      */
     private function saveImageFile(Request $r, UploadedFile $file) {
-        $filename = $this->getImageFilename($r->name, $file->extension());
+        $filename = $this->getImageFilename($r->name, $file->extension(), $this->uploadDisk);
         return $file->storeAs('', $filename, $this->uploadDisk);
+    }
+
+    /**
+     * Almacena la imagen en miniatura para thumbnails al filesystem
+     *
+     * @param Request $r
+     * @param UploadedFile $file
+     * @return string
+     */
+    private function saveThumbnailFile(Request $r, UploadedFile $file) {
+        $manager = new ImageManager();
+        $image = $manager
+                        ->make($file)
+                        ->fit(120, 120)
+                        ->encode('jpg', 100);
+        $filename = $this->getImageFilename($r->name, 'jpg', $this->thumbnailDisk);
+        Storage::disk($this->thumbnailDisk)->put($filename, $image);
+        return $filename;
     }
 
     /**
@@ -52,11 +73,11 @@ class ImageUploadController extends MultimediaController
      * @param string $extension La extensión del archivo que será utilizada para guardarlo en el filesystem
      * @return string el nombre de archivo sin duplicados que será utilizado por la imagen.
      */
-    private function getImageFilename($name, $extension) {
+    private function getImageFilename($name, $extension, $disk) {
         $file_slug = str_slug($name);
         $suffix = '';
         $index = 0;
-        while(Storage::disk($this->uploadDisk)->exists($file_slug.$suffix.'.'.$extension)) {
+        while(Storage::disk($disk)->exists($file_slug.$suffix.'.'.$extension)) {
             $index++;
             $suffix = '-'-str_pad($index, 3, "0", STR_PAD_LEFT);
         }
