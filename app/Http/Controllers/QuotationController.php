@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Quotation;
 use App\Services\CartService;
+use App\Events\OrderConfirmation;
 
 class QuotationController extends Controller
 {
@@ -25,8 +26,8 @@ class QuotationController extends Controller
 
     public function quote(Request $request) {
         $validated = $request->validate([
-            'extra' => 'nullable|max:3000|alpha_dash',
-            'cc' => 'nullable|max:191'
+            'extra' => 'nullable|max:3000',
+            'cc' => 'nullable|max:191|email'
         ]);
 
         $cart = $this->cs->getActiveCart();
@@ -43,6 +44,8 @@ class QuotationController extends Controller
 
         $user->currentCart()->associate(null);
         $user->save();
+
+        event(new OrderConfirmation($quotation));
 
         return redirect('quoted');
 

@@ -20,4 +20,9 @@ class Multimedia extends Model
         }
         return $value;
     }
+
+    public function getThumbnailPathAttribute() {
+        $thumb = $this->getOriginal('thumbnail');
+        return Storage::disk('thumbnail')->path($thumb);
+    }
 }

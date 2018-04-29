@@ -18,6 +18,24 @@ class Product extends Model
         return $this->belongsTo('App\Category');
     }
 
+    public function getThumbnailAttribute() {
+        $thumb = $this->medias()->where('type', 0)->first();
+        if($thumb === null){
+            return "images/producto-sin-foto.jpg";
+        }
+
+        return $thumb->thumbnail;
+    }
+
+    public function getThumbnailPathAttribute() {
+        $thumb = $this->medias()->where('type', 0)->first();
+        if($thumb === null){
+            return public_path() . "/images/producto-sin-foto.jpg";
+        }
+
+        return $thumb->thumbnail_path;
+    }
+
     public function medias() {
         return $this->belongsToMany('App\Multimedia')->withTimestamps();
     }

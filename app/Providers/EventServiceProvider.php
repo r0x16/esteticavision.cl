@@ -18,6 +18,9 @@ class EventServiceProvider extends ServiceProvider
         ],
         'Illuminate\Auth\Events\Login' => [
             'App\Listeners\SetShoppingCart',
+        ],
+        'App\Events\OrderConfirmation' => [
+            'App\Listeners\SendOrderConfirmationEmail'
         ]
     ];
 
