@@ -1,7 +1,7 @@
 @extends('layouts.index')
 
 @section('title')
-{{ $product->name}} | Estética Visión
+{{ $product->name}} | {{ $app_name }}
 @endsection
 
 @section('meta')
