@@ -1,10 +1,11 @@
 {
-    "/css/all.css": "/css/all.css",
-    "/css/home.css": "/css/home.css",
-    "/css/product.css": "/css/product.css",
-    "/css/search.css": "/css/search.css",
-    "/css/register.css": "/css/register.css",
-    "/css/profile.css": "/css/profile.css",
-    "/css/cart.css": "/css/cart.css",
-    "/css/quoted.css": "/css/quoted.css"
+    "/_html/css/all.css": "/_html/css/all.css",
+    "/_html/css/home.css": "/_html/css/home.css",
+    "/_html/css/product.css": "/_html/css/product.css",
+    "/_html/css/search.css": "/_html/css/search.css",
+    "/_html/css/register.css": "/_html/css/register.css",
+    "/_html/css/profile.css": "/_html/css/profile.css",
+    "/_html/css/cart.css": "/_html/css/cart.css",
+    "/_html/css/quoted.css": "/_html/css/quoted.css",
+    "/_html/css/extra.css": "/_html/css/extra.css"
 }

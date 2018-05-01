@@ -20,31 +20,35 @@ mix
         'resources/assets/css/footer.css',
         'resources/assets/css/management.css',
         'resources/assets/css/categories.css'
-    ], 'public/css/all.css')
+    ], 'public_html/css/all.css')
     .styles([
         'resources/assets/css/home.css',
         'resources/assets/css/featured.css',
         'resources/assets/css/carousel.css'
-    ], 'public/css/home.css')
+    ], 'public_html/css/home.css')
     .styles([
         'resources/assets/css/no-home.css',
         'resources/assets/css/product.css'
-    ], 'public/css/product.css')
+    ], 'public_html/css/product.css')
     .styles([
         'resources/assets/css/no-home.css',
         'resources/assets/css/search.css'
-    ], 'public/css/search.css')
+    ], 'public_html/css/search.css')
     .styles([
         'resources/assets/css/no-home.css',
         'resources/assets/css/register.css'
-    ], 'public/css/register.css')
+    ], 'public_html/css/register.css')
     .styles([
         'resources/assets/css/no-home.css',
         'resources/assets/css/profile.css'
-    ], 'public/css/profile.css')
+    ], 'public_html/css/profile.css')
     .styles([
         'resources/assets/css/cart.css'
-    ], 'public/css/cart.css')
+    ], 'public_html/css/cart.css')
     .styles([
         'resources/assets/css/quoted.css'
-    ], 'public/css/quoted.css');
+    ], 'public_html/css/quoted.css')
+    .styles([
+        'resources/assets/css/no-home.css',
+        'resources/assets/css/extra.css'
+    ], 'public_html/css/extra.css');

@@ -27,3 +27,7 @@ Route::post('/cart/delete', 'CartController@deleteProduct');
 Route::post('/cart/checkout', 'QuotationController@quote')->middleware('auth');
 Route::get('/quoted', 'QuotationController@quoted');
 Route::get('cart/checkout', 'QuotationController@toCart');
+
+// Extra pages routes
+Route::get('/contact', 'ContactUsController@index');
+Route::post('/contact', 'ContactUsController@store');

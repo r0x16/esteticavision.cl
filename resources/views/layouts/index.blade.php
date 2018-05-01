@@ -8,6 +8,7 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="/css/all.css">
     @yield('styles')
+    @yield('headerscripts')
 </head>
 <body>
     @include('include.header')

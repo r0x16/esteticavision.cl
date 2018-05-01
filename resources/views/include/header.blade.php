@@ -10,16 +10,16 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-item nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-item nav-link" href="#">Productos</a>
+                    <a class="nav-item nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-item nav-link" href="#">¿Cómo Comprar?</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-item nav-link" href="#">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-item nav-link" href="/contact">Contacto</a>
                 </li>
             </ul>
         </div>

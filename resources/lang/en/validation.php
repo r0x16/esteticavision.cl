@@ -118,4 +118,6 @@ return [
 
     'attributes' => [],
 
+    'recaptcha' => 'Please ensure that you are human!',
+
 ];
