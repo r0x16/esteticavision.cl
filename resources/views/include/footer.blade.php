@@ -35,7 +35,7 @@
                     <a href="https://www.facebook.com/KEPMedical" target="_blank">
                         <span class="icon-facebook"></span>
                     </a>
-                    <a href="https://www.twitter.com/KEPMedical" target="_blank">
+                    <a href="https://www.twitter.com/kepmedical_cl" target="_blank">
                         <span class="icon-twitter"></span>
                     </a>
                 </p>
