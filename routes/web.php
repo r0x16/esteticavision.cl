@@ -18,6 +18,12 @@ Route::get('/category/{category}', 'CategoryController@index')->name('category')
 
 // Security Routes
 Auth::routes();
+Route::get('/google-oauth/login', 'Auth\Social\GoogleController@login');
+Route::get('/google-oauth/callback', 'Auth\Social\GoogleController@callback');
+Route::get('/twitter-oauth/login', 'Auth\Social\TwitterController@login');
+Route::get('/twitter-oauth/callback', 'Auth\Social\TwitterController@callback');
+Route::get('/facebook-oauth/login', 'Auth\Social\FacebookController@login');
+Route::get('/facebook-oauth/callback', 'Auth\Social\FacebookController@callback');
 
 // Cart Routes
 Route::get('/cart', 'CartController@show');

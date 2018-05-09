@@ -36,6 +36,6 @@ class User extends Authenticatable
     }
 
     public function identity() {
-        return $this->hasOne('App\UsersIdentity');
+        return $this->hasMany('App\UsersIdentity');
     }
 }

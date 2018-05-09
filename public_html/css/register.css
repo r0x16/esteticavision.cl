@@ -82,3 +82,8 @@ hgroup {
 .social .icon:before {
     color: white;
 }
+
+.social a:link,
+.social a:visited {
+    color: #FFF;
+}

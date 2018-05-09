@@ -5,20 +5,26 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="social facebook">
-                    <span class="icon icon-brand"></span>
-                    Facebook
+                    <a href="/facebook-oauth/login">
+                        <span class="icon icon-brand"></span>
+                        Facebook
+                    </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="social twitter">
-                    <span class="icon icon-brand6"></span>
-                    Twitter
+                    <a href="/twitter-oauth/login">
+                        <span class="icon icon-brand6"></span>
+                        Twitter
+                    </a>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="social google">
-                    <span class="icon icon-brand3"></span>
-                    Google
+                    <a href="/google-oauth/login">
+                        <span class="icon icon-brand3"></span>
+                        Google
+                    </a>
                 </div>
             </div>
         </div>

@@ -35,4 +35,22 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'google' => [
+        'client_id' => env('AUTH_GOOGLE_ID'),
+        'client_secret' => env('AUTH_GOOGLE_SECRET'),
+        'redirect' => '/google-oauth/callback'
+    ],
+
+    'twitter' => [
+        'client_id' => env('AUTH_TWITTER_ID'),
+        'client_secret' => env('AUTH_TWITTER_SECRET'),
+        'redirect' => '/twitter-oauth/callback'
+    ],
+
+    'facebook' => [
+        'client_id' => env('AUTH_FACEBOOK_ID'),
+        'client_secret' => env('AUTH_FACEBOOK_SECRET'),
+        'redirect' => '/facebook-oauth/callback'
+    ],
+
 ];
