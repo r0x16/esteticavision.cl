@@ -28,6 +28,7 @@ Route::middleware('auth:api')->group(function () {
     Route::get('categories/{category}/webpage', 'Api\Category\CategoryWebpageController@show');
     Route::post('categories/{category}/webpage', 'Api\Category\CategoryWebpageController@store');
     Route::put('categories/{category}/webpage', 'Api\Category\CategoryWebpageController@update');
+    Route::get('categories/{category}/removable', 'Api\Category\CategoryController@removable');
 
     // Rutas asociadas al módulo de productos
     Route::resource('products', 'Api\Product\ProductController');
@@ -35,6 +36,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('products/{product}/media', 'Api\Product\ProductMediaController@store');
     Route::resource('product/details', 'Api\Product\ProductDetailController');
     Route::resource('product/features', 'Api\Product\ProductFeatureController');
+    Route::put('product/category', 'Api\Product\ProductController@updateCategory');
 });
 
 Route::get('/media/list', 'Api\Multimedia\ImageUploadController@listImages');

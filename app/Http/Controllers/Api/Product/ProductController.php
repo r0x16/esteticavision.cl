@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api\Product;
 use App\Http\Controllers\Controller;
 use App\Product;
 use App\Tag;
+use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Resources\ProductResource;
 
@@ -144,5 +145,22 @@ class ProductController extends Controller
     public function destroy(Product $product)
     {
         //
+    }
+
+    /**
+     * Update all product on a category
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\Response
+     */
+    public function updateCategory(Request $request) {
+        $old_category = Category::findOrFail($request->input('old_category_id'));
+        $new_category = Category::findOrFail($request->input('new_category_id'));
+
+        $affected = $old_category->products()->update(['category_id' => $new_category->id]);
+
+        return [
+            'affected' => $affected
+        ];
     }
 }

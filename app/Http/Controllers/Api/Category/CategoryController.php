@@ -94,7 +94,27 @@ class CategoryController extends Controller {
      * @return \Illuminate\Http\Response
      */
     public function destroy(Category $category) {
-        //
+        $removable = $this->removable($category);
+        if ($removable['with_products'] or $removable['with_childrens']) {
+            return [
+                'error' => 'No se puede eliminar una categoría con productos o subcategorías asociadas.'
+            ];
+        }
+
+        return $category->delete();
+    }
+
+    /**
+     * Checks if category is removable
+     *
+     * @param Category $category
+     * @return \Illuminate\Http\Response
+     */
+    public function removable(Category $category) {
+        return [
+            'with_products' => $category->products()->count() > 0,
+            'with_childrens' => $category->childrens()->count() > 0
+        ];
     }
 
     /**
