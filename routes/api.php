@@ -37,6 +37,9 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('product/details', 'Api\Product\ProductDetailController');
     Route::resource('product/features', 'Api\Product\ProductFeatureController');
     Route::put('product/category', 'Api\Product\ProductController@updateCategory');
+
+    // Rutas asociadas a la creación de marcas
+    Route::resource('brands', 'Api\BrandController');
 });
 
 Route::get('/media/list', 'Api\Multimedia\ImageUploadController@listImages');
