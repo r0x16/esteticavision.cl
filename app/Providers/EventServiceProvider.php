@@ -15,6 +15,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         'Illuminate\Auth\Events\Registered' => [
             'App\Listeners\LogLocalIdentity',
+            'App\Listeners\ShowWelcomeMessage',
         ],
         'Illuminate\Auth\Events\Login' => [
             'App\Listeners\SetShoppingCart',

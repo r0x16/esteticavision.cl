@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\User;
 use App\UsersIdentity;
+use Illuminate\Auth\Events\Registered;
 
 class SocialController extends Controller
 {
@@ -16,6 +17,7 @@ class SocialController extends Controller
         $account = $this->getDatabaseUser($user);
         if($account === null) {
             $account = $this->createUser($user);
+            event(new Registered($account));
         } else {
             $this->refreshUser($account, $user);
         }

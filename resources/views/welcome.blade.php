@@ -8,6 +8,9 @@
 
 @section('footerscripts')
 <script src="/js/vendor/parallax.min.js"></script>
+@if($welcome_message)
+    <script src="/js/welcome-modal.js"></script>
+@endif
 @endsection
 
 @section('body')
@@ -24,4 +27,7 @@
         </div>
     </div>
 </div>
+@if($welcome_message)
+    @include('home.welcome-modal')
+@endif
 @endsection

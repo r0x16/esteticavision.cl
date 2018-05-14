@@ -9,7 +9,8 @@ class HomeController extends Controller
 {
     public function index() {
         return view('welcome', [
-            'random_products' => $this->getRandomProducts(6)
+            'random_products' => $this->getRandomProducts(6),
+            'welcome_message' => session()->has('welcome')
         ]);
     }
 
