@@ -101,7 +101,10 @@ class CategoryController extends Controller {
             ];
         }
 
-        return $category->delete();
+        $result = $category->delete();
+        return [
+            'status' => $result
+        ];
     }
 
     /**
