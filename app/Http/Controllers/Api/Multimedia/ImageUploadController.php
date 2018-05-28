@@ -79,7 +79,7 @@ class ImageUploadController extends MultimediaController
         $index = 0;
         while(Storage::disk($disk)->exists($file_slug.$suffix.'.'.$extension)) {
             $index++;
-            $suffix = '-'-str_pad($index, 3, "0", STR_PAD_LEFT);
+            $suffix = '-'.str_pad($index, 3, "0", STR_PAD_LEFT);
         }
         return $file_slug.$suffix.'.'.$extension;
     }
