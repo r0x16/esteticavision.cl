@@ -25,6 +25,7 @@ class ViewComposersProvider extends ServiceProvider
         view()->composer('include.categories-all', function($view) {
             $view->with('categories', Category::where('supercategory_id', null)
                                         ->with('childrens.childrens')
+                                        ->orderBy('name', 'ASC')
                                         ->get());
         });
 
