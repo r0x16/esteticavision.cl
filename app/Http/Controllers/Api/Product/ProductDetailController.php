@@ -54,9 +54,9 @@ class ProductDetailController extends Controller
      * @param  \App\ProductDetail  $productDetail
      * @return \Illuminate\Http\Response
      */
-    public function show(ProductDetail $productDetail)
+    public function show($productDetail)
     {
-        //
+        return ProductDetail::findOrFail($productDetail);
     }
 
     /**
@@ -77,9 +77,15 @@ class ProductDetailController extends Controller
      * @param  \App\ProductDetail  $productDetail
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, ProductDetail $productDetail)
+    public function update(Request $request, $productDetail)
     {
-        //
+	    $detail = ProductDetail::findOrFail($productDetail);
+        $detail->name = $request->input('name');
+        $detail->description = $request->input('description');
+
+        $detail->save();
+
+        return $detail;
     }
 
     /**
@@ -88,8 +94,9 @@ class ProductDetailController extends Controller
      * @param  \App\ProductDetail  $productDetail
      * @return \Illuminate\Http\Response
      */
-    public function destroy(ProductDetail $productDetail)
+    public function destroy($productDetail)
     {
-        //
+	$detail = ProductDetail::findOrFail($productDetail);
+        return ['result' => $detail->delete()];
     }
 }
