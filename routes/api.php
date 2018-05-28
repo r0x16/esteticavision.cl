@@ -34,6 +34,7 @@ Route::middleware('auth:api')->group(function () {
     Route::resource('products', 'Api\Product\ProductController');
     Route::get('products/{product}/media', 'Api\Product\ProductMediaController@list');
     Route::post('products/{product}/media', 'Api\Product\ProductMediaController@store');
+    Route::resource('products/tags', 'Api\Product\ProductTagsController');
     Route::resource('product/details', 'Api\Product\ProductDetailController');
     Route::resource('product/features', 'Api\Product\ProductFeatureController');
     Route::put('product/category', 'Api\Product\ProductController@updateCategory');
