@@ -133,7 +133,21 @@ class ProductController extends Controller
      */
     public function update(Request $request, Product $product)
     {
-        //
+        $product->name = $request->input('name');
+        $product->description = $request->input('description');
+        $product->code = $request->input('code');
+        $product->slug = $this->getValidSlug($request->input('name'));
+        $product->category_id = $request->input('category');
+
+        if ($request->input('brand') != 0) {
+            $product->brand_id = $request->input('brand');
+        } else {
+            $product->brand_id = null;
+        }
+
+        $product->save();
+
+        return $product;
     }
 
     /**
