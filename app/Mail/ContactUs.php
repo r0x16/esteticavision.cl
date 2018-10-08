@@ -37,6 +37,11 @@ class ContactUs extends Mailable
     {
         return $this
                 ->subject($this->subject)
-                ->view('mail.contactus');
+                ->view('mail.contactus')
+                ->withSwiftMessage(function($message) {
+                    $message
+                    ->getHeaders()
+                    ->addTextHeader('X-Mailgun-Tag', 'contact');
+                });
     }
 }
