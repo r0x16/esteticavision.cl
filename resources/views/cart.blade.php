@@ -11,21 +11,11 @@
 
 @section('profile_body')
 <h1>Tu carrito de compra</h1>
-<div class="row">
-    <div class="col-md-8">
-        <div id="cart_list">
-            @foreach($cart->products as $product)
-                @include('cart.item')
-            @endforeach
-        </div>
+@if($cart !== null)
+    @include('cart.cart-list')
+@else
+    <div class="alert alert-info">
+        Actualmente tu carrito de compra está vacío. Puedes volver al inicio <a href="/">desde aquí</a>
     </div>
-    <div class="col-md-4">
-        @auth
-            @include('cart.checkout')
-        @endauth
-        @guest
-            @include('cart.login')
-        @endguest
-    </div>
-</div>
+@endif
 @endsection
