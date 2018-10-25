@@ -20,7 +20,7 @@
     @include('include.management')
     <div class="row">
             <div class="col-md-3">
-                @include('include.categories-all')
+                @include('search.categories_filter')
             </div>
             <div class="col-md-9">
                 <h1 class="search-title">Resultados de búsqueda para "<span class="search-query">{{ $query }}</span>"</h1>
