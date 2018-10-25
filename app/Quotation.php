@@ -13,4 +13,27 @@ class Quotation extends Model
     public function cart() {
         return $this->belongsTo('App\Cart');
     }
+
+    public function getStatusMessageAttribute() {
+        $messages = [
+            0 => [
+                'color' => 'info',
+                'message' => 'Activa'
+            ],
+            1 => [
+                'color' => 'success',
+                'message' => 'Lista'
+            ],
+            2 => [
+                'color' => 'warning',
+                'message' => 'En Espera'
+            ],
+            3 => [
+                'color' => 'danger',
+                'message' => 'Cancelada'
+            ]
+        ];
+
+        return $messages[$this->status];
+    }
 }

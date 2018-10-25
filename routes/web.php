@@ -34,6 +34,10 @@ Route::post('/cart/checkout', 'QuotationController@quote')->middleware('auth');
 Route::get('/quoted', 'QuotationController@quoted');
 Route::get('cart/checkout', 'QuotationController@toCart');
 
+// Quotation Routes
+Route::get('/quotations', 'QuotationController@index')->middleware('auth');
+Route::get('/quotations/{quotation}', 'QuotationController@show')->middleware('auth')->name('show_quotation');
+
 // Extra pages routes
 Route::get('/contact', 'ContactUsController@index');
 Route::post('/contact', 'ContactUsController@store');
