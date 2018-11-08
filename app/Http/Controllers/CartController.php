@@ -45,6 +45,12 @@ class CartController extends Controller
             $cart->products()->detach($validated['product']);
         }
 
+        $product_count = $cart->products()->count();
+
+        if($product_count === 0) {
+           $cs->dissociateCart(); 
+        }
+
         return redirect('/cart');
     }
 

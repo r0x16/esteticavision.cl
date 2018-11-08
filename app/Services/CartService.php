@@ -44,6 +44,16 @@ class CartService {
         return $active->products()->count();
     }
 
+    public function dissociateCart() {
+        if(\Auth::check()) {
+            $user = $this->request->user();
+            $user->currentCart()->dissociate();
+            $user->save();
+        } else {
+            $this->request->session()->forget('cart');
+        }
+    }
+
     private function createCart() {
         $cart = new Cart;
         $cart->uuid = $this->request->session()->getId();
