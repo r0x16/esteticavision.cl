@@ -1,12 +1,21 @@
 @if(count($product->medias) > 0)
-<div id="images">
-    <div class="active" style="background-image: url('{{$product->medias[0]->src}}')">
-
-    </div>
-    <div class="items">
+<div class="fotorama"
+    data-width="100%"
+    data-ratio="800/600"
+    data-nav="thumbs"
+    data-thumbwidth="80"
+    data-thumbheight="80"
+    data-allowfullscreen="true"
+    data-loop="true"
+    >
         @foreach($product->medias as $media)
-            <div class="item" style="background-image: url('{{$media->thumbnail}}')"></div>
+            @if($media->type == 1)
+                <a href="https://youtube.com/watch?v={{$media->src}}">
+            @else
+                <a href="{{$media->src}}">
+            @endif
+                <img src="{{$media->thumbnail}}">
+            </a>
         @endforeach
-    </div>
-</div>
+  </div>
 @endif
