@@ -3,7 +3,8 @@ header .navbar {
     background-color: #fff;
 }
 #profile-body {
-    min-height: 213px;
+    min-height: 200px;
+    margin-bottom: 13px;
 }
 
 #profile_nav h3 {

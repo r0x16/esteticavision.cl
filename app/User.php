@@ -42,4 +42,8 @@ class User extends Authenticatable
     public function identity() {
         return $this->hasMany('App\UsersIdentity');
     }
+
+    public function invoiceData() {
+        return $this->hasOne('App\InvoiceData');
+    }
 }
