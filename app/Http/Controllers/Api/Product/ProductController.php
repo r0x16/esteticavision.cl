@@ -8,6 +8,7 @@ use App\Tag;
 use App\Category;
 use Illuminate\Http\Request;
 use App\Http\Resources\ProductResource;
+use DB;
 
 class ProductController extends Controller
 {
@@ -16,9 +17,14 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return ProductResource::collection(Product::paginate(9));
+        if($request->has('q')) {
+            $products = Product::where('name', 'like', '%'.$request->q.'%')->paginate(9);
+        } else {
+            $products = Product::paginate(9);
+        }
+        return ProductResource::collection($products);
     }
 
     /**
@@ -158,7 +164,13 @@ class ProductController extends Controller
      */
     public function destroy(Product $product)
     {
-        //
+        DB::table('cart_product')->where('product_id', $product->id)->delete();
+        DB::table('multimedia_product')->where('product_id', $product->id)->delete();
+        DB::table('product_details')->where('product_id', $product->id)->delete();
+        DB::table('product_features')->where('product_id', $product->id)->delete();
+        DB::table('product_tag')->where('product_id', $product->id)->delete();
+        $product->delete();
+        return $product;
     }
 
     /**

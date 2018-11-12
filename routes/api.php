@@ -22,6 +22,7 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/media/image', 'Api\Multimedia\ImageUploadController@imageStore');
     Route::post('/media/youtube', 'Api\Multimedia\YoutubeElementController@youtubeStore');
     Route::get('/media/chooser/list', 'Api\Multimedia\MediaChooserController@list');
+    Route::delete('/media/{media}', 'Api\Multimedia\MultimediaController@destroy');
 
     // Rutas asociadas al módulo de categorías.
     Route::resource('categories', 'Api\Category\CategoryController');

@@ -5,8 +5,9 @@ namespace App\Http\Controllers\Api\Multimedia;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Multimedia;
+use DB;
 
-abstract class MultimediaController extends Controller
+class MultimediaController extends Controller
 {
     /**
      * Persiste en la base de datos el elemento multimedia.
@@ -26,5 +27,13 @@ abstract class MultimediaController extends Controller
         // Se persiste en la base de datos.
         $multimedia->save();
         return $multimedia;
+    }
+
+    public function destroy(Multimedia $media) {
+        DB::table('category_medias')->where('multimedia_id', $media->id);
+        DB::table('multimedia_product')->where('multimedia_id', $media->id);
+        $media->delete();
+
+        return $media;
     }
 }
