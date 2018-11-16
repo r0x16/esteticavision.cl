@@ -22,7 +22,8 @@
 <div class="fotorama"
     data-fit="cover"
     data-width="100%"
-    data-height="400">
+    data-height="400"
+    data-autoplay="true">
     @foreach($carousel_items as $i => $item)
     <div data-img="{{$item->multimedia->src}}">
         @if($item->title != '' || $item->description != '')
