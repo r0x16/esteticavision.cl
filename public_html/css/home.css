@@ -177,7 +177,7 @@ header .navbar {
         border-bottom: 3px solid #DDD;
     }
 }
-#carousel {
+.fotorama {
     margin: 15px;
     padding: 10px;
     border: 1px solid #EEE;
@@ -189,10 +189,16 @@ header .navbar {
 }
 
 @media only screen and (max-width: 480px) {
-    #carousel {
+    .fotorama {
         margin: 15px 0;
         padding: 0;
         border-width: 0px;
         box-shadow: none;
     }
+}
+
+.fotorama .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.4);
+    right: 0;
+    left: 0;
 }

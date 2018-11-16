@@ -42,6 +42,9 @@ Route::middleware('auth:api')->group(function () {
 
     // Rutas asociadas a la creación de marcas
     Route::resource('brands', 'Api\BrandController');
+
+    // Rutas asociadas al carrusel de imágenes de la página principal
+    Route::resource('carousel', 'Api\CarouselItemController');
 });
 
 Route::get('/media/list', 'Api\Multimedia\ImageUploadController@listImages');

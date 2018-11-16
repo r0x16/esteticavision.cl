@@ -4,6 +4,7 @@
 
 @section('styles')
 <link rel="stylesheet" href="css/home.css">
+<link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
 @endsection
 
 @section('footerscripts')
@@ -11,6 +12,7 @@
 @if($welcome_message)
     <script src="/js/welcome-modal.js"></script>
 @endif
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 @endsection
 
 @section('body')
@@ -22,7 +24,9 @@
             @include('include.categories-all')
         </div>
         <div class="col-md-9">
-            {{--  @include('home.carousel')  --}}
+            @if(count($carousel_items) > 0)
+                @include('home.carousel')
+            @endif
             @include('home.featured')
         </div>
     </div>
