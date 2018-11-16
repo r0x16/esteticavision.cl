@@ -11,6 +11,11 @@
 |
 */
 
+// Route::get('/migrate', function() {
+//     \Artisan::call('migrate');
+//     dd(\Artisan::output());
+// });
+
 Route::get('/', 'HomeController@index');
 Route::get('/p/{product}/{slug?}', 'ProductController@index')->name('product');
 Route::get('/search', 'SearchController@index');
