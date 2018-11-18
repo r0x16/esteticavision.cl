@@ -170,6 +170,7 @@ return [
         TomLingham\Searchy\SearchyServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        Larapacks\Setting\SettingServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -233,6 +234,7 @@ return [
         'Searchy' => TomLingham\Searchy\Facades\Searchy::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Setting' => Larapacks\Setting\Facades\Setting::class,
 
     ],
 

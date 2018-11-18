@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\CarouselItem;
+use Setting;
 
 class HomeController extends Controller
 {
@@ -12,7 +13,8 @@ class HomeController extends Controller
         return view('welcome', [
             'random_products' => $this->getRandomProducts(6),
             'carousel_items' => CarouselItem::with('multimedia')->get(),
-            'welcome_message' => session()->has('welcome')
+            'welcome_message' => session()->has('welcome'),
+            'home_banner' => Setting::get('homebanner')
         ]);
     }
 

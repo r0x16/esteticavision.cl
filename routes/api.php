@@ -45,6 +45,11 @@ Route::middleware('auth:api')->group(function () {
 
     // Rutas asociadas al carrusel de imágenes de la página principal
     Route::resource('carousel', 'Api\CarouselItemController');
+
+    // Rutas asociadas a las configuraciones del sitio
+    Route::get('setting/get', 'Api\SettingsController@getSingle');
+    Route::post('setting/set', 'Api\SettingsController@setSingle');
+    Route::delete('setting/forget', 'Api\SettingsController@forget');
 });
 
 Route::get('/media/list', 'Api\Multimedia\ImageUploadController@listImages');

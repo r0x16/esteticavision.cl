@@ -28,6 +28,9 @@
                 @include('home.carousel')
             @endif
             @include('home.featured')
+            @if($home_banner)
+                @include('home.banner')
+            @endif
         </div>
     </div>
 </div>
