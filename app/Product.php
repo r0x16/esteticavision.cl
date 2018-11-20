@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Product extends Model
 {
+
+    protected $appends = ['thumbnail'];
+
     public function tags() {
         return $this->belongsToMany('App\Tag')->withTimestamps();
     }

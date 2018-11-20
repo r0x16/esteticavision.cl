@@ -50,6 +50,15 @@ Route::middleware('auth:api')->group(function () {
     Route::get('setting/get', 'Api\SettingsController@getSingle');
     Route::post('setting/set', 'Api\SettingsController@setSingle');
     Route::delete('setting/forget', 'Api\SettingsController@forget');
+
+    // Rutas asociadas al módulo de cotizaciones
+    Route::get('quotations', 'Api\QuotationController@index');
+    Route::get('quotations/status', 'Api\QuotationController@status');
+    Route::put('quotations/{quotation}/status', 'Api\QuotationController@editStatus');
+    Route::get('quotations/{quotation}/detail', 'Api\QuotationController@getDetail');
+
+    // Rutas asociadas al módulo de usuarios
+    Route::get('users', 'Api\UsersController@index');
 });
 
 Route::get('/media/list', 'Api\Multimedia\ImageUploadController@listImages');
