@@ -46,6 +46,7 @@ Route::get('/quotations/{quotation}', 'QuotationController@show')->middleware('a
 // Extra pages routes
 Route::get('/contact', 'ContactUsController@index');
 Route::post('/contact', 'ContactUsController@store');
+Route::get('/about', 'ExtraPagesController@aboutPage');
 
 // Invoice Data Routes
 Route::get('/invoice_data', 'InvoiceUserDataController@index');

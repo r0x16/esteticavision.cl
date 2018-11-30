@@ -13,6 +13,7 @@
 <body>
     @include('include.header')
     @yield('body')
+    @include('include.howto-modal')
     @include('include.footer')
     <script src="/js/vendor/jquery.min.js"></script>
     <script src="/js/vendor/popper.min.js"></script>

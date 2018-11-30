@@ -13,10 +13,10 @@
                     <a class="nav-item nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link" href="#">¿Cómo Comprar?</a>
+                    <a class="nav-item nav-link" href="#" data-toggle="modal" data-target="#howtoModal">¿Cómo Comprar?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-item nav-link" href="#">Nosotros</a>
+                    <a class="nav-item nav-link" href="/about">Nosotros</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-item nav-link" href="/contact">Contacto</a>
