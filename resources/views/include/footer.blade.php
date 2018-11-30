@@ -5,24 +5,25 @@
                 <img src="/images/logo_blanco.png" alt="{{$app_name}}">
             </div>
             <div class="col-md-10">
-                KEP Medical es una empresa que ofrece insumos y equipos médicos.
+                <div>Kep Medical es una empresa líder en insumos y equipos médicos de alta calidad.</div>
+                <div>Ofrece una rápida solución a tus necesidades, acompañándote en todo el proceso de compra con la mejor atención.</div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-4">
-                <h4>Contactanos</h4>
+                <h4>Contáctanos</h4>
                 <p>
-                    Doctor Manuel Barros Borgoño 71 Oficina 1105, Providencia.
+                    Doctor Manuel Barros Borgoño 71 Oficina 1105. Providencia. Santiago.
                 </p>
                 <p>
-                    (+569) 9256 2828
+                    +569 9256 2828 (también Whatsapp)
                 </p>
                 <p>
                     contacto@kepmedical.cl
                 </p>
                 <p>
                     Horario de Atención:
-                    Lunes a Viernes de 08:00 a 18:00 hrs.
+                    Lunes a Viernes de 08:00 a 18:00 horas.
                 </p>
             </div>
             <div class="col-md-4"></div>
