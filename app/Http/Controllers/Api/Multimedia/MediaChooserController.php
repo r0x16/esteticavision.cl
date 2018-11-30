@@ -10,11 +10,11 @@ use App\Multimedia;
 class MediaChooserController extends Controller
 {
     public function list(Request $request) {
+        $medias = Multimedia::orderBy('name', 'asc');
         if($request->has('q')) {
-            $medias = Multimedia::where('name', 'like', '%'.$request->q.'%')->paginate(12);
-        } else {
-            $medias = Multimedia::paginate(12);
-        }
+            $medias = $medias->where('name', 'like', '%'.$request->q.'%');
+        } 
+        $medias = $medias->paginate(12);
         return MultimediaResource::collection($medias);
     }
 }

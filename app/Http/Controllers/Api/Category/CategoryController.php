@@ -23,6 +23,7 @@ class CategoryController extends Controller {
             ->when($supercategory, function ($query) use($supercategory) {
                 return $query->where('supercategory_id', $supercategory);
             })
+            ->orderBy('name', 'asc')
             ->get();
     }
 

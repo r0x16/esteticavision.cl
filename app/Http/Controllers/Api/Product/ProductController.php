@@ -19,11 +19,14 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
+        $products = Product::orderBy('name', 'asc');
         if($request->has('q')) {
-            $products = Product::where('name', 'like', '%'.$request->q.'%')->paginate(9);
-        } else {
-            $products = Product::paginate(9);
+            $products = $products->where(function($query) {
+                $query->where('name', 'like', '%'.$request->q.'%')
+                    ->orWhere('code', 'like', '%'.$request->q.'%');
+            });
         }
+        $products = $products->paginate(9);
         return ProductResource::collection($products);
     }
 
