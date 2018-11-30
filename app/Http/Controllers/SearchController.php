@@ -11,7 +11,7 @@ class SearchController extends Controller
 {
     public function index(Request $request) {
         $query = $request->query('q');
-        $results = Searchy::products('name', 'description')
+        $results = Searchy::products('name', 'description', 'code')
                     ->query($query)
                     ->select('id', 'category_id')
                     ->get();
