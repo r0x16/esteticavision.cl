@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/css/all.css">
     @yield('styles')
     @yield('headerscripts')
-    @env('production')
+    @env('prod')
         @include('layouts.analytics')
     @endenv
 </head>
