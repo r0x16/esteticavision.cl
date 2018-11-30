@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
         \DB::listen(function ($query) {
             \Log::debug($query->sql, $query->bindings, $query->time);
         });
+
+        \Blade::if('env', function ($environment) {
+            return app()->environment($environment);
+        });
     }
 
     /**

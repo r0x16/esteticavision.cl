@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="/css/all.css">
     @yield('styles')
     @yield('headerscripts')
+    @env('production')
+        @include('layouts.analytics')
+    @endenv
 </head>
 <body>
     @include('include.header')
